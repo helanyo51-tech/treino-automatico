@@ -1,0 +1,10 @@
+{
+  "segunda": { "nome": "Treino A - Peito e Tríceps", "exercicios": [
+    { "nome": "Supino reto", "series": 4, "reps": 10 },
+    { "nome": "Tríceps corda", "series": 3, "reps": 12 }
+  ]},
+  "terca": { "nome": "Treino B - Costas e Bíceps", "exercicios": [
+    { "nome": "Puxada frontal", "series": 4, "reps": 10 },
+    { "nome": "Rosca direta", "series": 3, "reps": 12 }
+  ]}
+}
