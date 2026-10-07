@@ -1,0 +1,27 @@
+name: Treino do dia
+
+on:
+  # Permite rodar manualmente pelo botão "Run workflow"
+  workflow_dispatch:
+  # Roda todo dia às 11:00 UTC (08:00 no horário de Brasília)
+  schedule:
+    - cron: "0 11 * * *"
+
+jobs:
+  treino:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar o Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Compilar o programa
+        run: javac -d out src/main/java/App.java
+
+      - name: Rodar o programa
+        run: java -cp out App
